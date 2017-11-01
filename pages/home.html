@@ -7,6 +7,52 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <style>
+          nav ul {
+            height:300px;
+            width:30%;
+            overflow:hidden;
+            overflow-y:scroll;
+          }
+
+          .careTaker_list {
+            list-style-type: none;
+          }
+
+          #Claudio {
+            background:#ADE78C;
+            text-align: center;
+          }
+          #Stephanie {
+            background:#ADE78C;
+            text-align: center;
+          }
+
+          #careTaker_list_container {
+            text-align: center;
+          }
+
+          #hamburger_menu_button {
+            width: 150px;
+            height: 40px;
+          }
+
+          #filter_by_button {
+            width: 150px;
+            height: 40px;
+          }
+
+
+          #navigation_items_container {
+            display:inline-block;
+          }
+
+          #navigation_items_container span {
+            font-size: 40px;
+          }
+
+        </style>
+
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -20,20 +66,36 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Care Love</h1>
-        <h2>Homepage</h2>
-        <p>Neon Genesis Evangelion</p>
-        <div>
-            <a href="careProviderProfile.html">Care Provider Profile</a>
+
+        <h1>Homepage</h1>
+
+        <div id="navigation_items_container">
+            <button href="hamburger.html" id="hamburger_menu_button">Hamburger Menu</button>
+            <span>Care Love</span>
+            <button href="filter.html" id="filter_by_button">Filter By</button>
         </div>
-        <div>
-            <a href="hamburger.html">Hamburger Menu</a>
-        </div>
-        <div>
-            <a href="filter.html">Filter By</a>
-        </div>
-        <div>
-            <a href="../index.html">Logout</a>
+
+        <div id="careTaker_list_container">
+          <nav>
+          <ul class="careTaker_list">
+                <li>
+                  <a href="careProviderProfile.html">
+                    <div id="Claudio">
+                      <img src="../pix/claudio.jpg" height="200" width="200" alt="Claudio Picture">
+                      <h4>11 reviews</h4>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="careProviderProfile.html">
+                    <div id="Stephanie">
+                      <img src="../pix/stephanie.jpeg" height="200" width="200" alt="Stephanie Picture">
+                      <h4>13 reviews</h4>
+                    </div>
+                  </a>
+                </li>
+          </ul>
+          <nav>
         </div>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
