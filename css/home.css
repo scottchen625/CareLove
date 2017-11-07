@@ -1,0 +1,49 @@
+          nav ul {
+            height:300px;
+            overflow:hidden;
+            overflow-y:scroll;
+          }
+
+          .caretakersNav {
+            list-style-type: none;
+            height:300px;
+            overflow:hidden;
+            overflow-y:scroll;
+          }
+
+          .caretakers {
+            background:#ADE78C;
+            text-align: center;
+          }
+
+          .container {
+            text-align: center;
+          }
+
+          #careTaker_list_container {
+            text-align: center;
+          }
+
+          #hamburger_menu_button {
+            width: 150px;
+            height: 40px;
+          }
+
+          #filter_by_button {
+            width: 150px;
+            height: 40px;
+          }
+
+          img { 
+            max-width: 100%; 
+            height: auto; 
+          }
+
+
+          #navigation_items_container {
+            display:inline-block;
+          }
+
+          #navigation_items_container span {
+            font-size: 40px;
+          }
