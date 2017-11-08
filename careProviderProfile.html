@@ -40,10 +40,13 @@
         <h2 style = "text-align: center">{{name}}</h2>
         <img class="img-fluid" style="display: block; margin: 0 auto;" src="{{profilePic}}" alt="{{name}}">
         <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
-        <div><b>Hourly Rate:</b>${{hourly_rate}}</div>
+        <h4 style="text-align: center;">{{num_reviews}} reviews</h4>
+        <p style="text-align: center;"><b>Hourly Rate:</b>${{hourly_rate}}</p>
         <!-- Trigger the modal with a button -->
         <div>
+          <div class="text-center">
           <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Call {{phone}}</button>
+          </div>
 
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
@@ -67,18 +70,14 @@
           </div>
         </div>
 
-        <h3>Bio</h3>
-        <p>{{Bio}}</p>
+        <h3 style="text-align: center;">Bio</h3>
+        <p style="text-align: center;">{{Bio}}</p>
 </script>
 
     <div id="templatedProjects">
       <!-- we will inject templated project HTML code into here -->
     </div>
 
-
-        <div>
-            <a href="../reviews/reviewA.html">Review</a>
-        </div>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
