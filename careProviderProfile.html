@@ -25,23 +25,29 @@
         <!-- Add your site or application content here -->
         <div>
             <div style = "float:left; width: 25%;">
-                <a href="../../home.html" class="btn btn-info" role="button">Back</a>
+                <a href="home.html" class="btn btn-info" role="button">Back</a>
             </div>
             <div style = "float:left; width: 75%; text-align: center">
                 <h1>Care Love</h1>
             </div>
         </div>
 
-        <h2 style = "text-align: center">Claudio Bonucci</h2>
 
-
-        <img class="img-fluid" style="display: block; margin: 0 auto;" src="../../pix/claudio.jpg" alt="claudio">
-        <img class="img-fluid" style="display: block; margin: 0 auto;" src="../../pix/review_stars_1.png">
-
-
+        <!-- Handlebar Code -->
+        <!-- remember to put Handlebars fs within script tags so that the
+     webpage doesn't attempt to load them as HTML -->
+<script id="entry-template" type="text/x-handlebars-template">
+        <h2 style = "text-align: center">{{name}}</h2>
+        <img class="img-fluid" style="display: block; margin: 0 auto;" src="{{profilePic}}" alt="{{name}}">
+        <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
+        <h4 style="text-align: center;">{{num_reviews}} reviews</h4>
+        <p style="text-align: center;"><b>Hourly Rate:</b>${{hourly_rate}}</p>
+         <p style="text-align: center;"><b>Available:</b> {{availability}}</p>
         <!-- Trigger the modal with a button -->
         <div>
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Call (949) 123-4567</button>
+          <div class="text-center">
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Call {{phone}}</button>
+          </div>
 
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
@@ -53,11 +59,11 @@
                   <h4 class="modal-title">Call</h4>
                 </div>
                 <div class="modal-body">
-                  <p>(949) 123-4567</p>
+                  <p>{{phone}}</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <a href="tel:9495297606"> <button type="button" class="btn btn-default" data-dismiss="modal"> Call </button> </a>
+                  <button type="button" class="btn btn-default" data-dismiss="modal"> <a href="tel:{{phone}}">Call</a> </button>
                 </div>
               </div>
 
@@ -65,12 +71,14 @@
           </div>
         </div>
 
-        <h3>Bio</h3>
-        <p>I like soccer and long walks on the beach.</p>
+        <h3 style="text-align: center;">Bio</h3>
+        <p style="text-align: center;">{{Bio}}</p>
+</script>
 
-        <div>
-            <a href="../reviews/reviewA.html">Review</a>
-        </div>
+    <div id="templatedProjects">
+      <!-- we will inject templated project HTML code into here -->
+    </div>
+
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -87,5 +95,11 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v4.0.11.js"></script>
+        <script src="js/careProviderProfile.js"></script>
+
     </body>
 </html>

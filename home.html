@@ -25,9 +25,8 @@
 
           <!-- Add your site or application content here -->
           <!-- citation for hamburger menu: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
-
-          <div class="container">
-            <h1>Homepage</h1>
+<div class="container">
+        <h1>Homepage</h1>
 
             <div id="navigation_items_container">
               <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
@@ -43,24 +42,26 @@
 
               <h4 style="float:left; width: 45%;">Care Love</h4>
               <a href="filter.html" style="float:right; width: 40%;" class="btn btn-info" id="filterby_button" role="button">Filter By</a>
+
             </div>
 
 
             <ul class="caretakersNav">
               <script id="caretaker-list-template" type="text/x-handlebars-template">
                 <li class="caretakers">
+                  <span onclick="openNewPage({{index}})">
                   <a href="{{profilePage}}">
                     <div id="{{name}}">
                       <h4>{{name}}</h4>
                       <img src="{{profilePic}}" class="img-fluid" alt="{{name}} Picture">
+                      <img class="img-fluid" style="display: inline-block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
                       <h4>{{num_reviews}} reviews</h4>
                     </div>
                   </a>
+                  </span>
                 </li>
               </script>
             </ul>
-
-            <h1 id="ageSomething">something</h1>
 
             <div id="templatedProjects">
               <!-- we will inject templated project HTML code into here -->
@@ -68,19 +69,6 @@
 
           </div>
 
-
-
-
-
-
-
-
-
-
-          <script src="https://code.jquery.com/jquery.js"></script>
-          <script src="js/bootstrap.min.js"></script>
-          <script src="js/handlebars-v4.0.11.js"></script>
-          <script src="js/home.js"></script>
 
           <script src="js/vendor/modernizr-3.5.0.min.js"></script>
           <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -98,5 +86,10 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
           </script>
           <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        </body>
-        </html>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v4.0.11.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
