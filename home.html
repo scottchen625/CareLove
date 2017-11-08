@@ -27,39 +27,77 @@
 
         <!-- citation for hamburger menu: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
         <div class="container">
+
             <h1>Homepage</h1>
 
             <div id="navigation_items_container">
-                <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
-
-                <div id="mySidenav" class="sidenav" >
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="pages/userProfile.html">Profile</a>
-                  <a href="pages/help.html">Need Help?</a>
-                  <a href="index.html">Sign Out</a>
-              </div>
-
-              <span style="font-size:30px;cursor:pointer; float: left; width: 25%;" onclick="openNav()">&#9776; </span>
-
-              <span style="float:left; width: 55%;">Care Love</span>
-              <a href="filter.html" style="float:left; width: 20%;" class="btn btn-info" id="filterby_button" role="button">Filter By</a>
-          </div>
+                <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a>
+                <span style="float:left; width: 55%;">Care Love</span>
+                <a href="filter.html" style="float:left; width: 20%;" class="btn btn-info" id="hamburger_menu_button" role="button">Filter By</a>
+            </div>
 
 
-          <ul class="caretakersNav">
-            <script id="caretaker-list-template" type="text/x-handlebars-template">
-              {{#each this}}​
-              <li class="caretakers">
-                <a href="{{profilePage}}">
-                  <div id="{{name}}">
-                    <h4>{{name}}</h4>
-                    <img src="{{profilePic}}" class="img-fluid" alt="{{name}} Picture">
-                    <h4>{{num_reviews}} reviews</h4>
-                </div>
-            </a>
-        </li>
-        {{/each}}
-    </script>
+            <ul class="caretakersNav">
+                <script id="caretaker-list-template" type="text/x-handlebars-template">
+                  <li class="caretakers">
+                    <a href="{{profilePage}}">
+                      <div id="{{name}}">
+                        <h4>{{name}}</h4>
+                        <img src="{{profilePic}}" class="img-fluid" alt="{{name}} Picture">
+                        <h4>{{num_reviews}} reviews</h4>
+                    </div>
+                </a>
+            </li>
+        </script>
+    </ul>
+
+    <h1 id="ageSomething">something</h1>
+    
+    <div id="templatedProjects">
+      <!-- we will inject templated project HTML code into here -->
+  </div>
+
+</div>
+
+
+
+
+
+
+
+>>>>>>> 83a23304c57c2ff46673c6fb36ba0922acf50c85
+
+<div id="navigation_items_container">
+    <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
+
+    <div id="mySidenav" class="sidenav" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="pages/userProfile.html">Profile</a>
+      <a href="pages/help.html">Need Help?</a>
+      <a href="index.html">Sign Out</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer; float: left; width: 25%;" onclick="openNav()">&#9776; </span>
+
+  <span style="float:left; width: 55%;">Care Love</span>
+  <a href="filter.html" style="float:left; width: 20%;" class="btn btn-info" id="filterby_button" role="button">Filter By</a>
+</div>
+
+
+<ul class="caretakersNav">
+    <script id="caretaker-list-template" type="text/x-handlebars-template">
+      {{#each this}}​
+      <li class="caretakers">
+        <a href="{{profilePage}}">
+          <div id="{{name}}">
+            <h4>{{name}}</h4>
+            <img src="{{profilePic}}" class="img-fluid" alt="{{name}} Picture">
+            <h4>{{num_reviews}} reviews</h4>
+        </div>
+    </a>
+</li>
+{{/each}}
+</script>
 </ul>
 </div>
 
