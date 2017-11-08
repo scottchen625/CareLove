@@ -42,6 +42,8 @@ $(function () {
   		 'index': 10}
 	]
 
+	localStorage.setItem('careTakerDataLocalStorage', careTakerData);
+
 	var minAgeFilter = localStorage.getItem('minAge');
 	console.log(minAgeFilter);
 
