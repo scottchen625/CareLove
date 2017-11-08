@@ -81,6 +81,8 @@ $(function () {
 
   	for (var i = 0; i < careTakerData.length; i++) {
     	var curData = careTakerData[i];
+    	if(gender)
+    	{
     	if(gender != 'B')
     	{
     		if(curData.gender == gender && curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge)
@@ -96,6 +98,12 @@ $(function () {
 				var curHtml = theTemplate(curData);
     			$(".caretakersNav").append(curHtml);
     		}
+    	}
+    	}
+    	else
+    	{
+    		var curHtml = theTemplate(curData);
+    		$(".caretakersNav").append(curHtml);
     	}
   	}
 
