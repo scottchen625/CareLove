@@ -38,8 +38,9 @@
      webpage doesn't attempt to load them as HTML -->
 <script id="entry-template" type="text/x-handlebars-template">
         <h2 style = "text-align: center">{{name}}</h2>
-        <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/{{name}}.jpg" alt="{{name}}">
-        <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/review_stars_1.png">
+        <img class="img-fluid" style="display: block; margin: 0 auto;" src="{{profilePic}}" alt="{{name}}">
+        <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
+        <div><b>Hourly Rate:</b>${{hourly_rate}}</div>
         <!-- Trigger the modal with a button -->
         <div>
           <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Call {{phone}}</button>
@@ -67,7 +68,7 @@
         </div>
 
         <h3>Bio</h3>
-        <p>I like soccer and long walks on the beach.</p>
+        <p>{{Bio}}</p>
 </script>
 
     <div id="templatedProjects">
