@@ -25,30 +25,34 @@
 
           <!-- Add your site or application content here -->
           <!-- citation for hamburger menu: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
-<div class="container">
-        <h1>Homepage</h1>
 
-            <div id="navigation_items_container">
-              <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
 
-              <div id="mySidenav" class="sidenav" >
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="pages/userProfile.html">Profile</a>
-                <a href="pages/help.html">Need Help?</a>
-                <a href="index.html">Sign Out</a>
-              </div>
 
-              <span style="font-size:30px;cursor:pointer; float: left; width: 15%;" onclick="openNav()">&#9776; </span>
 
-              <span style="float:left; width: 60%; color:#4CAF50; font-family:verdana;">Care Love</span>
-              <a href="filter.html" style="float:left; width: 25%;" class="btn btn-info" id="filterby_button" role="button">Filter By</a>
+          <h1 style="color:#4CAF50; font-family:verdana;text-align: center;">Care Love</h1>
+
+            <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
+
+
+            <div id="mySidenav" class="sidenav" >
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="pages/userProfile.html">Profile</a>
+              <a href="pages/help.html">Need Help?</a>
+              <a href="index.html">Sign Out</a>
             </div>
 
+            <div class="row">
+               <div class="tableElem"> <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span> </div>
+               <div class="tableElem"> <h4 style="color:#4CAF50; font-family:verdana;"> Home </h4> </div>
+               <div class="tableElem"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
+            </div>
+        
 
-            <ul class="caretakersNav">
-              <script id="caretaker-list-template" type="text/x-handlebars-template">
-                <li class="caretakers">
-                  <span onclick="openNewPage({{index}})">
+        <div class="container">
+          <div class="caretakersNav">
+            <script id="caretaker-list-template" type="text/x-handlebars-template">
+              <li class="caretakers">
+                <span onclick="openNewPage({{index}})">
                   <a href="{{profilePage}}">
                     <div id="{{name}}">
                       <h3>{{name}}</h3>
@@ -58,38 +62,38 @@
                       <h4>Hourly Rate: ${{hourly_rate}}</h4>
                     </div>
                   </a>
-                  </span>
-                </li>
-              </script>
-            </ul>
-
-            <div id="templatedProjects">
-              <!-- we will inject templated project HTML code into here -->
-            </div>
-
+                </span>
+              </li>
+            </script>
           </div>
 
+          <div id="templatedProjects">
+            <!-- we will inject templated project HTML code into here -->
+          </div>
 
-          <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-          <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-          <script src="js/plugins.js"></script>
-          <script src="js/main.js"></script>
+        </div>
 
 
-          <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-          <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-          </script>
-          <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+          window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+          ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/handlebars-v4.0.11.js"></script>
         <script src="js/home.js"></script>
-    </body>
-</html>
+      </body>
+      </html>
