@@ -1,88 +1,93 @@
-          nav ul {
-            height:300px;
-            overflow:hidden;
-            overflow-y:scroll;
-          }
+nav ul {
+  height:300px;
+  overflow:hidden;
+  overflow-y:scroll;
+}
 
-          .caretakersNav {
-            list-style-type: none;
-            height:300px;
-            overflow:hidden;
-            overflow-y:scroll;
-          }
+.appFunctionalityExplanation {
+  text-align: center;
+  padding-top: 10px;
+}
 
-          .caretakers {
-            background:#ADE78C;
-            text-align: center;
-          }
+.caretakersNav {
+  list-style-type: none;
+  height:300px;
+  overflow:hidden;
+  overflow-y:scroll;
+}
 
-          .container {
-            text-align: center;
-          }
+.caretakers {
+  background:#ADE78C;
+  text-align: center;
+}
 
-          #careTaker_list_container {
-            text-align: center;
-          }
+.container {
+  text-align: center;
+}
 
-          #hamburger_menu_button {
-            width: 150px;
-            height: 40px;
-          }
+#careTaker_list_container {
+  text-align: center;
+}
 
-          #filter_by_button {
-            width: 150px;
-            height: 40px;
-          }
+#hamburger_menu_button {
+  width: 150px;
+  height: 40px;
+}
 
-          img { 
-            max-width: 100%; 
-            height: auto; 
-          }
+#filter_by_button {
+  width: 150px;
+  height: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
-          #navigation_items_container {
-            display:inline-block;
-          }
+#navigation_items_container {
+  display:inline-block;
+}
 
-          #navigation_items_container span {
-            font-size: 40px;
-          }
+#navigation_items_container span {
+  font-size: 40px;
+}
 
-          
-          .sidenav {
-            display: none;
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 60px;
-          }
 
-          .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-          }
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
 
-          .sidenav a:hover {
-            color: #f1f1f1;
-          }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
 
-          .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-          }
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-          @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-          }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

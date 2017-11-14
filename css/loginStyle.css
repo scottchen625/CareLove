@@ -36,6 +36,11 @@ button:hover {
     margin: 24px 0 12px 0;
 }
 
+.appFunctionalityExplanation {
+  text-align: center;
+  padding-top: 10px;
+}
+
 /* login image */
 img.loginImage {
     width: 40%;
