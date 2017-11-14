@@ -1,88 +1,103 @@
-          nav ul {
-            height:300px;
-            overflow:hidden;
-            overflow-y:scroll;
-          }
+nav ul {
+  height:300px;
+  overflow:hidden;
+  overflow-y:scroll;
+}
 
-          .caretakersNav {
-            list-style-type: none;
-            height:300px;
-            overflow:hidden;
-            overflow-y:scroll;
-          }
-
-          .caretakers {
-            background:#ADE78C;
-            text-align: center;
-          }
-
-          .container {
-            text-align: center;
-          }
-
-          #careTaker_list_container {
-            text-align: center;
-          }
-
-          #hamburger_menu_button {
-            width: 150px;
-            height: 40px;
-          }
-
-          #filter_by_button {
-            width: 150px;
-            height: 40px;
-          }
-
-          img { 
-            max-width: 100%; 
-            height: auto; 
-          }
+.tableElem{
+  display: table-cell;       
+  text-align: center;     
+}
+.row {
+ display: table;
+ width: 100%;
+ table-layout: fixed;
+}
 
 
-          #navigation_items_container {
-            display:inline-block;
-          }
+.appFunctionalityExplanation {
+  text-align: center;
+  padding-top: 10px;
+}
 
-          #navigation_items_container span {
-            font-size: 40px;
-          }
+.caretakersNav {
+  list-style-type: none;
+  overflow:hidden;
+  overflow-y:scroll;
+}
 
-          
-          .sidenav {
-            display: none;
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            padding-top: 60px;
-          }
+.caretakers {
+  background:#ADE78C;
+  text-align: center;
+}
 
-          .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-          }
+.container {
+  text-align: center;
+}
 
-          .sidenav a:hover {
-            color: #f1f1f1;
-          }
+#careTaker_list_container {
+  text-align: center;
+}
 
-          .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-          }
+#hamburger_menu_button {
+  width: 150px;
+  height: 40px;
+}
 
-          @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-          }
+#filter_by_button {
+  width: 150px;
+  height: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+#navigation_items_container {
+  display:inline-block;
+}
+
+#navigation_items_container span {
+  font-size: 40px;
+}
+
+
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
