@@ -1,31 +1,28 @@
-// Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
-  console.log('hello world');
+$(function () {
+      var currUser = localStorage.getItem('loggedInUserIndex');
+      var userData = JSON.parse(localStorage.getItem('userDataLocalStorage'));
 
-  // when you first load the page, set a custom name if you have one:
-  var name = localStorage.getItem('customName');
-  if (name) {
-    $("#fName").html(name);
-  }
-
-  // use localStorage to store your name
-  $("#changeName").click(function() {
-    var newName = prompt("What's your new name?");
-    if (newName) {
-      $("#fName").html(newName);
-      localStorage.setItem('fName', newName);
-    }
-  });
-})
+      console.log(currUser);
+      console.log(userData);
 
 
-/*
-localStorage.setItem('careTakerDataLocalStorage', JSON.stringify(careTakerData));
-	var fName = localStorage.getItem('fName');
-	var lName = localStorage.getItem('lName');
-	var address = localStorage.getItem('address');
-	var city = localStorage.getItem('city');
-	var state = localStorage.getItem('state');
-	var zip = localStorage.getItem('zip');
-	var phone = localStorage.getItem('phone');
-*/
+      for(var i = 0; i < userData.length; i++) {
+            var currData = userData[i];
+
+            if(currData.userIndex == currUser)
+            {
+                  var dataOfCurrUser = currData; 
+                  document.getElementById("fName").innerHTML = dataOfCurrUser.fName;
+                  document.getElementById("lName").innerHTML = dataOfCurrUser.lName;
+                  document.getElementById("city").innerHTML = dataOfCurrUser.city;
+                  document.getElementById("state").innerHTML = dataOfCurrUser.state;
+                  document.getElementById("zip").innerHTML = dataOfCurrUser.zip;
+                  document.getElementById("phone").innerHTML = dataOfCurrUser.phone;
+                  document.getElementById("add").innerHTML = dataOfCurrUser.add;
+                  break;
+            }
+
+            
+      }
+
+});

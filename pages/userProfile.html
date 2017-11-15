@@ -11,8 +11,9 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/main.css">
+    <link rel="stylesheet" href="./../css/profile.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
@@ -21,33 +22,47 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Care Love</h1>
-        <h2>User Profile</h2>
-
-        <div contenteditable="false">
-            <h3 id="fName">First name: Justin</h3>
-            <h3 id="lName">Last name: Gil</h3>
-            <h3 id="address">Address: 382 Gilman Dr.</h3>
-            <h3 id="city">City: La Jolla</h3>
-            <h3 id="state">State: CA</h3>
-            <h3 id="zip">ZIP Code: 94123</h3>
-            <h3 id="phone">Phone: (911) 911 - 9111</h3>
+        
+        <div style = "text-align: center">
+            <h1>Care Love</h1>
         </div>
 
 
-        <div>
-            <a href="./../home.html">Home</a>
+        <div class="row">
+            <div class="backbutton">
+                <a href="./../home.html" class="btn btn-info" role="button">Back</a>
+            </div>
+            <div class="headertext">
+                <h4> User Profile </h4> 
+            </div>
         </div>
 
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+
+        <div class="imgcontainer">
+            <img src="./../pix/userselfie.jpeg" alt="loginImage" class="loginImage">
+        </div>
+
+
+        <div class="container" contenteditable="false">
+            <div >First name: <span id="fName"></span> </div>  
+            <div >Last name: <span id="lName"></span></div> 
+            <div >Address: <span id="add"></span></div> 
+            <div >City:  <span id="city"></span> </div>
+            <div >State: <span id="state"></span> </div>
+            <div >ZIP Code: <span id="zip"></span> </div>
+            <div >Phone: <span id="phone"></span></div>
+        </div>
+
+
+        <script src="./../js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/userProfile.js"></script>
+        <script src="./../js/plugins.js"></script>
+        <script src="./../js/main.js"></script>
+        <script src="./../js/userProfile.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>

@@ -1,0 +1,46 @@
+/* Center the login image inside this container */
+.imgcontainer {
+	text-align: center;
+}
+
+/* login image */
+img.loginImage {
+	width: 20%;
+	border-radius: 60%;
+}
+
+
+.backbutton{
+	display: table-cell;
+	text-align: left;
+	padding-left: 20px;
+	width: 45%;
+}
+
+.heardetext{
+	display: table-cell;
+	text-align: center;
+	width: 55%;
+}
+
+.row {
+	display: inline-block;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.container{
+	padding-left: 20px;
+	font-size: 20px;
+
+	width: 960px;
+	position: relative;
+	margin:0 auto;
+	line-height: 1.4em;
+
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+@media only screen and (max-width: 479px){
+	#container2 { width: 90%; }
+}

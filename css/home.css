@@ -4,10 +4,27 @@ nav ul {
   overflow-y:scroll;
 }
 
-.tableElem{
+.tableHamburger{
   display: table-cell;       
-  text-align: center;     
+  text-align: left; 
+  padding-left: 30px;
+  width: 33.4%;   
 }
+
+.tableHeader{
+  display: table-cell;       
+  text-align: center;  
+  width: 33.3%;   
+}
+
+.tableFilterButton{
+  display: table-cell;       
+  text-align: right;
+  width: 33.3%;   
+
+}
+
+
 .row {
  display: table;
  width: 100%;

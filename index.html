@@ -32,22 +32,21 @@
             </div>
 
             <div class="appFunctionalityExplanation">
-                <h6>Looking for professional caretakers? We will help connect you to them.</h6>
+                <h6>Looking for professional caretakers? We help connect you to them.</h6>
             </div>
 
             <div class="container">
                 <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input id="inputted_username" type="text" placeholder="Enter Username" name="uname" required>
 
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input id="inputted_password" type="password" placeholder="Enter Password" name="psw" required>
 
-                <button class="button" type="submit" onclick="window.location.href = 'home.html';" >Login</button>
+                <button id="login" class="button" type="submit" >Login</button>
+
+                <h4 id="invalid_account_warning" style="color:red">Not a recognized account</h4>
 
                 <div>
-                    <div id="checkbox">
-                       <input class="checkbox" type="checkbox" checked="checked"> Remember me
-                   </div>
                </div>
            </div>
 
@@ -60,6 +59,8 @@
            <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
            <script src="js/plugins.js"></script>
            <script src="js/main.js"></script>
+           <script src='js/login.js'></script>
+
 
            <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
            <script>
