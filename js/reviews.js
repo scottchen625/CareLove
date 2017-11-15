@@ -5,7 +5,7 @@ var careProviderData = jsonBlob[index - 1];
 var simpleData = {'name': careProviderData['name']};
 console.log(simpleData);
 
-$(function () {
+$(document).ready(function() {
 
   // start with a simple template
   var source   = $("#name-entry").html();
@@ -41,5 +41,38 @@ $(function () {
     var curHtml = template(curData);
     parentDiv.append(curHtml);
   }
+
+  var submitButton = document.getElementById("submit_button");
+  submitButton.style.display = "none";
+
+  var newReview = document.getElementById("newReview");
+  newReview.style.display = "none";
+
+  var reviewSubmissionMessage = document.getElementById("review_submission_message");
+  reviewSubmissionMessage.style.display = "none";
+
+});
+
+
+$("#write_review_button").click(function() {
+  var writeReviewButton = document.getElementById("write_review_button");
+  writeReviewButton.style.display = "none";
+
+  var submitButton = document.getElementById("submit_button");
+  submitButton.style.display = "block";
+
+  var newReview = document.getElementById("newReview");
+  newReview.style.display = "block";
+});
+
+$("#submit_button").click(function() {
+  var submitButton = document.getElementById("submit_button");
+  submitButton.style.display = "none";
+
+  var newReview = document.getElementById("newReview");
+  newReview.style.display = "none";
+
+  var reviewSubmissionMessage = document.getElementById("review_submission_message");
+  reviewSubmissionMessage.style.display = "block";
 
 });
