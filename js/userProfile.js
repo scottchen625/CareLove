@@ -31,6 +31,7 @@ $("#login").click(function() {
     }
     if(loggedInUserIndex != 0) {
         localStorage.setItem('loggedInUserIndex', loggedInUserIndex);
+        console.log(loggedInUserIndex);
         window.location.href = 'home.html';
     }
     else {

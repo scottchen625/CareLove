@@ -122,19 +122,19 @@ $(function () {
     	var curData = careTakerData[i];
       if(currUser == 1)
       {
-        var distance = currData.distanceFromJustin;
+        var distance = curData.distanceFromJustin;
       } 
       else if(currUser == 2)
       {
-        var distance = currData.distanceFromMomin;
+        var distance = curData.distanceFromMomin;
       }
       else if(currUser == 3)
       {
-        var distance = currData.distanceFromScott;
+        var distance = curData.distanceFromScott;
       }
       else if(currUser == 4)
       {
-        var distance = currData.distanceFromCharles;
+        var distance = curData.distanceFromCharles;
       }
 
     	if(gender)
