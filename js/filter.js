@@ -1,22 +1,21 @@
-$(function () {
-	// when you first load the page, set a custom name if you have one:
-  /*var age = localStorage.getItem('minAge');
-  if (age) {
-    $("#minAge").html(age);
-  }
-  else {
-  	var newAge = prompt("what's your min age range");
-  	localStorage.setItem('minAge', newAge);
-  }*/
+$(document).ready(function() {
+	var minAgeWarning = document.getElementById("min-age-warning");
+    minAgeWarning.style.display = "none";
+
+    var minMaxWarning = document.getElementById("min-max-warning");
+    minMaxWarning.style.display = "none";
 
 });
 
-
 $("#searchButton").click(function() {
-	console.log("reached click");
+	var minMaxWarning = document.getElementById("min-max-warning");
+	var minAgeWarning = document.getElementById("min-age-warning");
+	minMaxWarning.style.display = "none";
+	minAgeWarning.style.display = "none";
+
 	var minAge = document.getElementById("minAge").value;	
 	var maxAge = document.getElementById("maxAge").value;
-	console.log(minAge);
+
 	if (document.getElementById("priceOption1").checked) {
   		var priceRange = document.getElementById("priceOption1").value;
 	}
@@ -33,6 +32,22 @@ $("#searchButton").click(function() {
 		var priceRange = document.getElementById("priceOption5").value;
 	}
 
+	if (document.getElementById("locationOption1").checked) {
+  		var locationDistance = document.getElementById("locationOption1").value;
+	}
+	else if (document.getElementById("locationOption2").checked) {
+  		var locationDistance = document.getElementById("locationOption2").value;
+	}
+	else if (document.getElementById("locationOption3").checked) {
+  		var locationDistance = document.getElementById("locationOption3").value;
+	}
+	else if (document.getElementById("locationOption4").checked) {
+  		var locationDistance = document.getElementById("locationOption4").value;
+	}
+	else {
+		var locationDistance = document.getElementById("locationOption5").value;
+	}
+
 	if(document.getElementById("GenderMale").checked) {
 		var gender = document.getElementById("GenderMale").value;
 	}
@@ -46,6 +61,22 @@ $("#searchButton").click(function() {
 	localStorage.setItem('minAge', minAge);
 	localStorage.setItem('maxAge', maxAge);
 	localStorage.setItem('priceRange', priceRange);
+	localStorage.setItem('locationDistance', locationDistance);
 	localStorage.setItem('gender', gender);
+
+	
+	if(minAge >= 18 && maxAge >= 18) {
+		if(minAge > maxAge) {
+    		minMaxWarning.style.display = "block";
+    	} else {
+			window.location.href = "home.html"; 
+		}
+	} else {
+    	minAgeWarning.style.display = "block";
+    	if(minAge > maxAge) {
+    		minMaxWarning.style.display = "block";
+    	}
+	}
+
 
 });

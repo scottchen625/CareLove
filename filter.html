@@ -52,13 +52,13 @@
         <h4>Gender <br></h4>
         <form>
             <div class="radio">
-              <label><input type="radio" name="rad" value="M" id="GenderMale">Male</label>
+              <label><input type="radio" name="gender" value="M" id="GenderMale">Male</label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="rad" value="F" id="GenderFemale">Female</label>
+              <label><input type="radio" name="gender" value="F" id="GenderFemale">Female</label>
            </div>
            <div class="radio">
-              <label><input type="radio" name="rad" value="B" id="GenderBoth" checked>Doesnt Matter</label>
+              <label><input type="radio" name="gender" value="B" id="GenderBoth" checked>Doesnt Matter</label>
            </div>
         </form>
     </div>
@@ -66,12 +66,12 @@
     <br style="clear:both" />
 
     <div>
-    <h4 >Age</h4>
+    <h4>Age</h4>
         <form id="ageRangeInput">
             Minimum Age:<br>
-            <input type="number" id="minAge" min="0" step="1" value="0"><br>
+            <input type="number" id="minAge" min="18" step="1" value="18"><br>
             Maximum Age:<br>
-            <input type="number" id="maxAge" min="0" step="1" value= "100">
+            <input type="number" id="maxAge" min="18" step="1" value= "60">
         </form>
     </div>
 
@@ -79,6 +79,7 @@
 <br style="clear:both" />
 
 <h4>Price/hr</h4>
+
 <br style="clear:both" />
 
 
@@ -101,9 +102,36 @@
 </div>
 
 <br style="clear:both" />
+<br style="clear:both" />
+
+<h4>Distance from you (in miles)</h4>
+
+<br style="clear:both" />
+
+<div class="btn-group" data-toggle="buttons" style="display: block; margin: 0 auto;" id="locationRadioButtons">
+  <label class="btn btn-primary">
+    <input type="radio" name="locationDist" id="locationOption1" value="1"> 0-5
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="locationDist" id="locationOption2" value="2"> 6-15
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="locationDist" id="locationOption3" value="3">16-20
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="locationDist" id="locationOption4" value="4"> 20 &#8593;
+  </label>
+  <label class="btn btn-primary active">
+    <input type="radio" name="locationDist" id="locationOption5" value="5" checked> Any Distance
+  </label>
+</div>
+
+
 
 <div class="col-md-4 center-block" style="margin-top: 20px">
-    <a href="home.html" class="btn btn-info" role="button" id="searchButton">Search</a>
+    <a class="btn btn-info" role="button" id="searchButton">Search</a>
+    <h4 id="min-age-warning" style="color: red">Your 'Age' preferences must be 18+</h4>
+    <h4 id="min-max-warning" style="color: red">Your 'Minimum Age' must be less than or equal to your 'Maximum Age'</h4>
 </div>
 
 
