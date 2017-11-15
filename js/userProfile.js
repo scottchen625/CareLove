@@ -15,6 +15,7 @@ $(function () {
                   document.getElementById("zip").innerHTML = dataOfCurrUser.zip;
                   document.getElementById("phone").innerHTML = dataOfCurrUser.phone;
                   document.getElementById("add").innerHTML = dataOfCurrUser.add;
+                  document.getElementById("profilePic").src = dataOfCurrUser.profilePic;
 
                   break;
             }
