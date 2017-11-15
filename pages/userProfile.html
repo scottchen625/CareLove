@@ -11,8 +11,9 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/main.css">
+    <link rel="stylesheet" href="./../css/profile.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
@@ -21,22 +22,35 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Care Love</h1>
-        <h2>User Profile</h2>
-
-        <div contenteditable="false">
-            <h3 id="fName">First name: Justin</h3>
-            <h3 id="lName">Last name: Gil</h3>
-            <h3 id="address">Address: 382 Gilman Dr.</h3>
-            <h3 id="city">City: La Jolla</h3>
-            <h3 id="state">State: CA</h3>
-            <h3 id="zip">ZIP Code: 94123</h3>
-            <h3 id="phone">Phone: (911) 911 - 9111</h3>
+        
+        <div style = "text-align: center">
+            <h1>Care Love</h1>
         </div>
 
 
-        <div>
-            <a href="./../home.html">Home</a>
+        <div class="row">
+            <div class="backbutton">
+                <a href="./../home.html" class="btn btn-info" role="button">Back</a>
+            </div>
+            <div class="headertext">
+                <h4> User Profile </h4> 
+            </div>
+        </div>
+
+
+        <div class="imgcontainer">
+            <img src="./../pix/userselfie.jpeg" alt="loginImage" class="loginImage">
+        </div>
+
+
+        <div class="profileElems" contenteditable="false">
+            <div id="fName">First name: Justin </div>
+            <div id="lName">Last name: Gil </div>
+            <div id="address">Address: 382 Gilman Dr.</div>
+            <div id="city">City: La Jolla</div>
+            <div id="state">State: CA</div>
+            <div id="zip">ZIP Code: 94123</div>
+            <div id="phone">Phone: (911) 911 - 9111</div>
         </div>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>

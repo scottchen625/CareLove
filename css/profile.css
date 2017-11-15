@@ -1,0 +1,36 @@
+/* Center the login image inside this container */
+.imgcontainer {
+	text-align: center;
+}
+
+/* login image */
+img.loginImage {
+	width: 20%;
+	border-radius: 60%;
+}
+
+
+.backbutton{
+	display: table-cell;
+	text-align: left;
+	padding-left: 20px;
+	width: 45%;
+}
+
+.heardetext{
+	display: table-cell;
+	text-align: center;
+	width: 55%;
+}
+
+
+.row {
+	display: inline-block;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.profileElems{
+	padding-left: 20px;
+	font-size: 20px;
+}
