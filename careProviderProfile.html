@@ -39,8 +39,10 @@
 <script id="entry-template" type="text/x-handlebars-template">
         <h2 style = "text-align: center">{{name}}</h2>
         <img class="img-fluid" style="display: block; margin: 0 auto;" src="{{profilePic}}" alt="{{name}}">
-        <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
-        <h4 style="text-align: center;">{{num_reviews}} reviews</h4>
+        <a href="reviews.html">
+            <img class="img-fluid" style="display: block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
+            <h4 style="text-align: center;">{{num_reviews}} reviews</h4>
+        </a>
         <p style="text-align: center;"><b>Hourly Rate:</b>${{hourly_rate}}</p>
          <p style="text-align: center;"><b>Available:</b> {{availability}}</p>
         <!-- Trigger the modal with a button -->

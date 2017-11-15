@@ -8,8 +8,8 @@ $(function () {
   		{'name':'Roger', 'age': 25, 'gender': 'M', 'phone': '949-222-2222', 'hourly_rate':50, 'stars': 5, 'num_reviews': 4, 'profilePic': 'pix/roger.jpg',
   		 'profilePage': 'careProviderProfile.html', 'Bio': 'My number one hobby is to abduct humans.',
   		 'Monday': 1, 'Tuesday': 0, 'Wednesday': 1, 'Thursday': 0, 'Friday': 1, 'Saturday': 0, 'Sunday': 1,
-  		 'index': 2, 'review_array': ['He abducted me and took me to another galaxy, but I hold nothing against him because it was the most fun I’ve ever had in my life!!','Can’t understand what he’s saying, but seems to be able to read my mind and knows what I want!','Same thing happend to me as what an earlier reviewer mentioned – Roger abducted me and took me to another galaxy. It was an experience of a lifetime!'],
-       'stars_array': [5,5,5], 'distanceFromMomin':4, 'distanceFromScott':19, 'distanceFromJustin':10, 'distanceFromCharles':27},
+  		 'index': 2, 'review_array': ['He abducted me and took me to another galaxy, but I hold nothing against him because it was the most fun I’ve ever had in my life!!','Can’t understand what he’s saying, but seems to be able to read my mind and knows what I want!','Same thing happend to me as what an earlier reviewer mentioned – Roger abducted me and took me to another galaxy. It was an experience of a lifetime!', 'Roger is out of this world.'],
+       'stars_array': [5,5,5,5], 'distanceFromMomin':4, 'distanceFromScott':19, 'distanceFromJustin':10, 'distanceFromCharles':27},
   		{'name':'Hasan', 'age': 28, 'gender': 'M', 'phone': '949-333-3333', 'hourly_rate':45, 'stars': 5, 'num_reviews': 3, 'profilePic': 'pix/hasan.jpg',
   		 'profilePage': 'careProviderProfile.html', 'Bio': 'I like big booties and I cannot lie.',
   		 'Monday': 0, 'Tuesday': 1, 'Wednesday': 0, 'Thursday': 1, 'Friday': 1, 'Saturday': 0, 'Sunday': 1,
@@ -123,7 +123,7 @@ $(function () {
       if(currUser == 1)
       {
         var distance = curData.distanceFromJustin;
-      } 
+      }
       else if(currUser == 2)
       {
         var distance = curData.distanceFromMomin;
