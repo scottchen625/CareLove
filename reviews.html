@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <title>HomePage</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="css/home.css" rel="stylesheet">
+
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+</head>
+<body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div>
+            <div style = "float:left; width: 25%;">
+                <a href="careProviderProfile.html" class="btn btn-info" role="button">Back</a>
+            </div>
+            <div style = "float:left; width: 75%; text-align: center">
+                <h1>Care Love</h1>
+            </div>
+        </div>
+
+
+        <!-- Handlebar Code -->
+        <!-- remember to put Handlebars fs within script tags so that the
+     webpage doesn't attempt to load them as HTML -->
+<script id="name-entry" type="text/x-handlebars-template">
+    <h2 style = "text-align: center">Reviews for <b>{{name}}</b></h2>
+    <br>
+</script>
+
+    <div id="injectName">
+      <!-- we will inject templated project HTML code into here -->
+    </div>
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <div style="text-align: center;">
+    <p>stars: <b>{{stars}}</b></p>
+    <p>{{review_text}}</p>
+    <br>
+  </div>
+</script>
+
+    <div id="templatedProjects">
+      <!-- we will inject templated project HTML code into here -->
+    </div>
+
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+          window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+          ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v4.0.11.js"></script>
+        <script src="js/reviews.js"></script>
+      </body>
+      </html>
