@@ -1,0 +1,11 @@
+.review-button {
+  text-align: center;
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  color: white;
+  /*color: #93f08c;*/
+  background-color: rgb(147, 240, 140);
+}

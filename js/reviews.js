@@ -59,10 +59,10 @@ $("#write_review_button").click(function() {
   writeReviewButton.style.display = "none";
 
   var submitButton = document.getElementById("submit_button");
-  submitButton.style.display = "block";
+  submitButton.style.display = "inline";
 
   var newReview = document.getElementById("newReview");
-  newReview.style.display = "block";
+  newReview.style.display = "inline";
 });
 
 $("#submit_button").click(function() {
