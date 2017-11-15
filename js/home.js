@@ -59,6 +59,8 @@ $(function () {
 	var priceRange = localStorage.getItem('priceRange');
   var locationDistance = localStorage.getItem('locationDistance');
 	var gender = localStorage.getItem('gender');
+  var currUser = localStorage.getItem('loggedInUserIndex');
+  console.log(currUser);
 
 	if(priceRange == 1)
 	{
@@ -118,11 +120,28 @@ $(function () {
 
   	for (var i = 0; i < careTakerData.length; i++) {
     	var curData = careTakerData[i];
+      if(currUser == 1)
+      {
+        var distance = currData.distanceFromJustin;
+      } 
+      else if(currUser == 2)
+      {
+        var distance = currData.distanceFromMomin;
+      }
+      else if(currUser == 3)
+      {
+        var distance = currData.distanceFromScott;
+      }
+      else if(currUser == 4)
+      {
+        var distance = currData.distanceFromCharles;
+      }
+
     	if(gender)
     	{
     	if(gender != 'B')
     	{
-    		if(curData.gender == gender && curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge)
+    		if(curData.gender == gender && curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge && distance <= maxDist && distance >= minDist)
     		{
 				var curHtml = theTemplate(curData);
     			$(".caretakersNav").append(curHtml);
@@ -130,7 +149,7 @@ $(function () {
     	}
     	else
     	{
-    		if(curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge)
+    		if(curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge && distance <= maxDist && distance >= minDist)
     		{
 				var curHtml = theTemplate(curData);
     			$(".caretakersNav").append(curHtml);
