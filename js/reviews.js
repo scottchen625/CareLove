@@ -6,7 +6,22 @@ var simpleData = {'name': careProviderData['name']};
 console.log(simpleData);
 
 $(document).ready(function() {
+  var starText = document.getElementById("star_text");
+  starText.style.display = "none";
 
+  var starOptions = document.getElementById("star_options");
+  starOptions.style.display = "none";
+
+  var newReview = document.getElementById("newReview");
+  newReview.style.display = "none";
+
+  var submitButton = document.getElementById("submit_button");
+  submitButton.style.display = "none";
+
+  var reviewSubmissionMessage = document.getElementById("review_submission_message");
+  reviewSubmissionMessage.style.display = "none";
+
+  
   // start with a simple template
   var source   = $("#name-entry").html();
   var template = Handlebars.compile(source);
@@ -42,15 +57,6 @@ $(document).ready(function() {
     parentDiv.append(curHtml);
   }
 
-  var submitButton = document.getElementById("submit_button");
-  submitButton.style.display = "none";
-
-  var newReview = document.getElementById("newReview");
-  newReview.style.display = "none";
-
-  var reviewSubmissionMessage = document.getElementById("review_submission_message");
-  reviewSubmissionMessage.style.display = "none";
-
 });
 
 
@@ -58,11 +64,17 @@ $("#write_review_button").click(function() {
   var writeReviewButton = document.getElementById("write_review_button");
   writeReviewButton.style.display = "none";
 
+  var starText = document.getElementById("star_text");
+  starText.style.display = "inline";
+
+  var starOptions = document.getElementById("star_options");
+  starOptions.style.display = "inline";
+
   var submitButton = document.getElementById("submit_button");
-  submitButton.style.display = "block";
+  submitButton.style.display = "inline";
 
   var newReview = document.getElementById("newReview");
-  newReview.style.display = "block";
+  newReview.style.display = "inline";
 });
 
 $("#submit_button").click(function() {
@@ -72,7 +84,16 @@ $("#submit_button").click(function() {
   var newReview = document.getElementById("newReview");
   newReview.style.display = "none";
 
+  var starText = document.getElementById("star_text");
+  starText.style.display = "none";
+
+  var starOptions = document.getElementById("star_options");
+  starOptions.style.display = "none";
+
+  var submitButton = document.getElementById("submit_button");
+  submitButton.style.display = "none";
+
   var reviewSubmissionMessage = document.getElementById("review_submission_message");
-  reviewSubmissionMessage.style.display = "block";
+  reviewSubmissionMessage.style.display = "inline";
 
 });
