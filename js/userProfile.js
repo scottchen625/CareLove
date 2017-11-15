@@ -2,10 +2,6 @@ $(function () {
       var currUser = localStorage.getItem('loggedInUserIndex');
       var userData = JSON.parse(localStorage.getItem('userDataLocalStorage'));
 
-      console.log(currUser);
-      console.log(userData);
-
-
       for(var i = 0; i < userData.length; i++) {
             var currData = userData[i];
 
@@ -19,6 +15,7 @@ $(function () {
                   document.getElementById("zip").innerHTML = dataOfCurrUser.zip;
                   document.getElementById("phone").innerHTML = dataOfCurrUser.phone;
                   document.getElementById("add").innerHTML = dataOfCurrUser.add;
+
                   break;
             }
 
