@@ -71,6 +71,12 @@ img {
   height: auto;
 }
 
+.sortbyelements{
+  display: table-cell; 
+  text-align: center;
+  
+}
+
 
 #navigation_items_container {
   display:inline-block;
