@@ -5,6 +5,11 @@ $(function () {
   		 'Monday': 0, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'Friday': 0, 'Saturday': 1, 'Sunday': 1,
   		 'index': 1, 'review_array': ['Claudio’s good, but he made me watch soccer all day','Claudio was a good caretaker, and he even took a stroll with me at the beach!','Watched soccer the whole time he was with me. Wouldn’t stop shouting goallllllllll. Now my ears hurt.'],
        'stars_array': [4,5,3], 'distanceFromMomin':19, 'distanceFromScott':27, 'distanceFromJustin':4, 'distanceFromCharles':10},
+      {'name':'Roger', 'age': 25, 'gender': 'M', 'phone': '949-222-2222', 'hourly_rate':50, 'stars': 5, 'num_reviews': 4, 'profilePic': 'pix/roger.jpg',
+       'profilePage': 'careProviderProfile.html', 'Bio': 'My number one hobby is to abduct humans.',
+       'Monday': 1, 'Tuesday': 0, 'Wednesday': 1, 'Thursday': 0, 'Friday': 1, 'Saturday': 0, 'Sunday': 1,
+       'index': 2, 'review_array': ['He abducted me and took me to another galaxy, but I hold nothing against him because it was the most fun I’ve ever had in my life!!','Can’t understand what he’s saying, but seems to be able to read my mind and knows what I want!','Same thing happend to me as what an earlier reviewer mentioned – Roger abducted me and took me to another galaxy. It was an experience of a lifetime!', 'Roger is out of this world.'],
+       'stars_array': [5,5,5,5], 'distanceFromMomin':4, 'distanceFromScott':19, 'distanceFromJustin':10, 'distanceFromCharles':27},
   		{'name':'Hasan', 'age': 28, 'gender': 'M', 'phone': '949-333-3333', 'hourly_rate':45, 'stars': 5, 'num_reviews': 3, 'profilePic': 'pix/hasan.jpg',
   		 'profilePage': 'careProviderProfile.html', 'Bio': 'I like big booties and I cannot lie.',
   		 'Monday': 0, 'Tuesday': 1, 'Wednesday': 0, 'Thursday': 1, 'Friday': 1, 'Saturday': 0, 'Sunday': 1,
@@ -44,12 +49,8 @@ $(function () {
   		 'profilePage': 'careProviderProfile.html', 'Bio': 'I like expensive coffee shops and wearing skinny jeans.',
   		 'Monday': 1, 'Tuesday': 0, 'Wednesday': 0, 'Thursday': 1, 'Friday': 0, 'Saturday': 1, 'Sunday': 0,
   		 'index': 10, 'review_array': ['Theo’s good, but too hipster for me','Theo bought artisan coffee for me – so kind!','I don’t know how he is able to walk around with jeans that tight'],
-       'stars_array': [4,5,3], 'distanceFromMomin':27, 'distanceFromScott':19, 'distanceFromJustin':4, 'distanceFromCharles':10},
-      {'name':'Roger', 'age': 25, 'gender': 'M', 'phone': '949-222-2222', 'hourly_rate':50, 'stars': 5, 'num_reviews': 4, 'profilePic': 'pix/roger.jpg',
-       'profilePage': 'careProviderProfile.html', 'Bio': 'My number one hobby is to abduct humans.',
-       'Monday': 1, 'Tuesday': 0, 'Wednesday': 1, 'Thursday': 0, 'Friday': 1, 'Saturday': 0, 'Sunday': 1,
-       'index': 2, 'review_array': ['He abducted me and took me to another galaxy, but I hold nothing against him because it was the most fun I’ve ever had in my life!!','Can’t understand what he’s saying, but seems to be able to read my mind and knows what I want!','Same thing happend to me as what an earlier reviewer mentioned – Roger abducted me and took me to another galaxy. It was an experience of a lifetime!', 'Roger is out of this world.'],
-       'stars_array': [5,5,5,5], 'distanceFromMomin':4, 'distanceFromScott':19, 'distanceFromJustin':10, 'distanceFromCharles':27}
+       'stars_array': [4,5,3], 'distanceFromMomin':27, 'distanceFromScott':19, 'distanceFromJustin':4, 'distanceFromCharles':10}
+      
 	]
 
 	localStorage.setItem('careTakerDataLocalStorage', JSON.stringify(careTakerData));
@@ -61,6 +62,11 @@ $(function () {
 	var gender = localStorage.getItem('gender');
   var currUser = localStorage.getItem('loggedInUserIndex');
   var sort_option = localStorage.getItem('sort_option') || 0;
+
+  
+
+  var e = document.getElementById("sort_by_options");
+  e.options[sort_option].selected = true;
 
   console.log(minAge);
   console.log(maxAge);
@@ -129,7 +135,7 @@ $(function () {
   	var theTemplateScript   = $("#caretaker-list-template").html();
   	var theTemplate = Handlebars.compile(theTemplateScript);
     var filteredResults = [];
-    var noFiltration = false; 
+    var noFiltration = true; 
 
   	for (var i = 0; i < careTakerData.length; i++) {
     	var curData = careTakerData[i];
@@ -150,9 +156,9 @@ $(function () {
         var distance = curData.distanceFromCharles;
       }
 
-    	if(gender)
+    	if(localStorage.getItem('filterPageVisited') == 1)
     	{
-      noFiltration = true; 
+      noFiltration = false; 
     	if(gender != 'B')
     	{
     		if(curData.gender == gender && curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge && distance <= maxDist && distance >= minDist)
@@ -180,7 +186,7 @@ $(function () {
     	}
   	}
 
-    if(noFiltration == false)
+    if(noFiltration == true)
     {
       filteredResults = careTakerData;
     }
