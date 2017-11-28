@@ -4,7 +4,7 @@ nav ul {
   overflow-y:scroll;
 }
 
-#tableMenu{
+.tableMenu{
   display: table-cell;       
   text-align: left; 
   width: 20%;   
@@ -13,7 +13,6 @@ nav ul {
 .tableHeader{
   display: table-cell;       
   text-align: center; 
-  padding-left: 18px; 
   width: 60%;   
 }
 
@@ -27,6 +26,10 @@ nav ul {
  display: table;
  width: 100%;
  table-layout: fixed;
+
+ margin-right: 0px;
+ margin-left: 0px;
+
 }
 
 
@@ -124,8 +127,33 @@ img {
 }
 
 h1 {
-    padding: 0;
+  padding: 0;
   color:#4CAF50; 
   font-family:verdana;
   text-align: center;
 }
+#filterby_button{
+ margin-bottom: 3px;
+ margin-right: 15px;
+}
+
+#menuButton{
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #ADE78C;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
