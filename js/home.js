@@ -50,7 +50,7 @@ $(function () {
   		 'Monday': 1, 'Tuesday': 0, 'Wednesday': 0, 'Thursday': 1, 'Friday': 0, 'Saturday': 1, 'Sunday': 0,
   		 'index': 10, 'review_array': ['Theo’s good, but too hipster for me','Theo bought artisan coffee for me – so kind!','I don’t know how he is able to walk around with jeans that tight'],
        'stars_array': [4,5,3], 'distanceFromMomin':27, 'distanceFromScott':19, 'distanceFromJustin':4, 'distanceFromCharles':10}
-      
+
 	]
 
 	localStorage.setItem('careTakerDataLocalStorage', JSON.stringify(careTakerData));
@@ -65,8 +65,8 @@ $(function () {
 
   var e = document.getElementById("sort_by_options");
   e.options[sort_option].selected = true;
-   
-  
+
+
 
   console.log(minAge);
   console.log(maxAge);
@@ -143,7 +143,7 @@ $(function () {
   	var theTemplateScript   = $("#caretaker-list-template").html();
   	var theTemplate = Handlebars.compile(theTemplateScript);
     var filteredResults = [];
-    var noFiltration = true; 
+    var noFiltration = true;
 
   	for (var i = 0; i < careTakerData.length; i++) {
     	var curData = careTakerData[i];
@@ -166,7 +166,7 @@ $(function () {
 
     	if(localStorage.getItem('filterPageVisited') == 1)
     	{
-      noFiltration = false; 
+      noFiltration = false;
     	if(gender != 'B')
     	{
     		if(curData.gender == gender && curData.hourly_rate <= maxPrice && curData.hourly_rate >= minPrice && curData.age <= maxAge && curData.age >= minAge && distance <= maxDist && distance >= minDist)
@@ -205,9 +205,9 @@ $(function () {
       for(var i = (filteredResults.length-1); i >= 0; i--) {
         for(var j = 1; j <= i; j++){
           if(filteredResults[j-1].hourly_rate > filteredResults[j].hourly_rate) {
-            var temp = filteredResults[j-1]; 
-            filteredResults[j-1] = filteredResults[j]; 
-            filteredResults[j] = temp; 
+            var temp = filteredResults[j-1];
+            filteredResults[j-1] = filteredResults[j];
+            filteredResults[j] = temp;
           }
         }
       }
@@ -217,9 +217,9 @@ $(function () {
       for(var i = (filteredResults.length-1); i >= 0; i--) {
         for(var j = 1; j <= i; j++){
           if(filteredResults[j-1].stars < filteredResults[j].stars) {
-            var temp = filteredResults[j-1]; 
-            filteredResults[j-1] = filteredResults[j]; 
-            filteredResults[j] = temp; 
+            var temp = filteredResults[j-1];
+            filteredResults[j-1] = filteredResults[j];
+            filteredResults[j] = temp;
           }
         }
       }
@@ -230,9 +230,9 @@ $(function () {
       for(var i = (filteredResults.length-1); i >= 0; i--) {
         for(var j = 1; j <= i; j++){
           if(filteredResults[j-1].age > filteredResults[j].age) {
-            var temp = filteredResults[j-1]; 
-            filteredResults[j-1] = filteredResults[j]; 
-            filteredResults[j] = temp; 
+            var temp = filteredResults[j-1];
+            filteredResults[j-1] = filteredResults[j];
+            filteredResults[j] = temp;
           }
         }
       }
@@ -263,15 +263,15 @@ $(function () {
             var distanceJ = filteredResults[j].distanceFromCharles;
           }
           if(distanceJ1 > distanceJ) {
-            var temp = filteredResults[j-1]; 
-            filteredResults[j-1] = filteredResults[j]; 
-            filteredResults[j] = temp; 
+            var temp = filteredResults[j-1];
+            filteredResults[j-1] = filteredResults[j];
+            filteredResults[j] = temp;
           }
         }
       }
-      
+
     }
-    
+
     for (var i = 0; i < filteredResults.length; i++) {
         var curHtml = theTemplate(filteredResults[i]);
         $(".caretakersNav").append(curHtml);
@@ -291,6 +291,10 @@ $("#sort_by_options").change(function() {
 /* Open the sidenav */
 function openNav() {
     document.getElementById("mySidenav").style.display = "block";
+    console.log("menu/hamburger button clicked"); // fix smart quote from slide!
+    // tracker code here, refer to slide #26 and #27
+    tracker = ga.getAll()[0];
+    tracker.send('event', 'button', 'click');
 }
 
 /* Close/hide the sidenav */
