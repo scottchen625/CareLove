@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110408954-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110408954-1');
+    </script>
     <title>FilterByPage</title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,43 +19,34 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="css/home.css" rel="stylesheet">
-
+    <link href="css/filter.css" rel="stylesheet">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 
-
-    <style>
-        #gender_filter {
-            margin-top: 30px;
-        }
-
-    </style>
-    
 </head>
 <body>
-     
+
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
     <!-- Add your site or application content here -->
 
-    <h1 style="color:#4CAF50" style="font-family:verdana" class="text-center">Care Love</h1>
-
-    <div>
-        <div style = "float:left; width: 20%; padding-left: 10px">
-            <a href="home.html" class="btn btn-info" role="button">Back</a>
+    <div class="careloveTitle">
+          Care Love
         </div>
-        <br style="clear:both" />
-        <div style = "float:left; width: 80%; text-align: center">
-            <h4>Filter By Page</h4>
+
+        <div class="row">
+            <div class="backbutton">
+                <a href="home.html" class="btn btn-info" role="button">Back</a>
+            </div>
+            <div class="headertext">
+                <h4>Filter By</h4>
+            </div>
+            <div class="headertext">
+            </div>
         </div>
-    </div>
-
-
-    <br style="clear:both" />
-
 
     <div id="gender_filter" >
         <h4>Gender <br></h4>
@@ -63,10 +63,9 @@
         </form>
     </div>
 
-    <br style="clear:both" />
 
-    <div>
-    <h4>Age</h4>
+    <div id="age_filter">
+        <h4>Age</h4>
         <form id="ageRangeInput">
             Minimum Age:<br>
             <input type="number" id="minAge" min="18" step="1" value="18"><br>
@@ -75,61 +74,56 @@
         </form>
     </div>
 
+<div id="price_filter">
+    <h4>Price/hr</h4>
 
-<br style="clear:both" />
-
-<h4>Price/hr</h4>
-
-<br style="clear:both" />
-
-
-<div class="btn-group" data-toggle="buttons" style="display: block; margin: 0 auto;" id="priceRangeRadioButtons">
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="priceOption1" value="1"> $0-20
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="priceOption2" value="2"> $21-30
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="priceOption3" value="3"> $31-40
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="priceOption4" value="4"> $41 &#8593;
-  </label>
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" id="priceOption5" value="5" checked> Any Price
-  </label>
+    <div class="btn-group" data-toggle="buttons" style="display: block; margin: 0 auto;" id="priceRangeRadioButtons">
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="priceOption1" value="1"> $0-20
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="priceOption2" value="2"> $21-30
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="priceOption3" value="3"> $31-40
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" id="priceOption4" value="4"> $41 &#8593;
+      </label>
+      <label class="btn btn-primary active">
+        <input type="radio" name="options" id="priceOption5" value="5" checked> Any Price
+      </label>
+      <div style='clear:both'></div>
+    </div>
 </div>
 
-<br style="clear:both" />
-<br style="clear:both" />
-
-<h4>Distance from you (in miles)</h4>
-
-<br style="clear:both" />
-
-<div class="btn-group" data-toggle="buttons" style="display: block; margin: 0 auto;" id="locationRadioButtons">
-  <label class="btn btn-primary">
-    <input type="radio" name="locationDist" id="locationOption1" value="1"> 0-5
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="locationDist" id="locationOption2" value="2"> 6-15
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="locationDist" id="locationOption3" value="3">16-20
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="locationDist" id="locationOption4" value="4"> 21 &#8593;
-  </label>
-  <label class="btn btn-primary active">
-    <input type="radio" name="locationDist" id="locationOption5" value="5" checked> Any Distance
-  </label>
+<div id="distance_filter">
+    <h4>Distance from you (in miles)</h4>
+    <div class="btn-group" data-toggle="buttons" style="display: block; margin: 0 auto;" id="locationRadioButtons">
+      <label class="btn btn-primary">
+        <input type="radio" name="locationDist" id="locationOption1" value="1"> 0-5
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="locationDist" id="locationOption2" value="2"> 6-15
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="locationDist" id="locationOption3" value="3">16-20
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="locationDist" id="locationOption4" value="4"> 21 &#8593;
+      </label>
+      <label class="btn btn-primary active">
+        <input type="radio" name="locationDist" id="locationOption5" value="5" checked> Any Distance
+      </label>
+    </div>
+      <div style='clear:both'></div>
 </div>
 
 
-
-<div class="col-md-4 center-block" style="margin-top: 20px">
-    <a class="btn btn-info" role="button" id="searchButton">Search</a>
+<div style="margin-top: 20px; margin-bottom: 20px; width: 100%">
+    <div id="searchButtonCSS">
+      <a class="btn btn-info" role="button" id="searchButton">Search</a>
+    </div>
     <h4 id="min-age-warning" style="color: red">Your 'Age' preferences must be 18+</h4>
     <h4 id="min-max-warning" style="color: red">Your 'Minimum Age' must be less than or equal to your 'Maximum Age'</h4>
 </div>
@@ -147,13 +141,6 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>

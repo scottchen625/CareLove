@@ -30,69 +30,60 @@
 <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+          <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div>
-            <div style = "float:left; width: 25%;">
-                <a href="careProviderProfile.html" class="btn btn-info" role="button">Back</a>
+          <!-- Add your site or application content here -->
+          <!-- citation for hamburger menu: https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+
+
+
+
+          <h1 style="color:#4CAF50; font-family:verdana;text-align: center;">Care Love</h1>
+
+            <!-- <a href="hamburger.html" class="btn btn-info" style="float:left; width: 25%;" id="hamburger_menu_button" role="button">Hamburger</a> -->
+
+
+            <div id="mySidenav" class="sidenav" >
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="pages/userProfile.html">Profile</a>
+              <a href="pages/help.html">Need Help?</a>
+              <a href="index.html">Sign Out</a>
             </div>
-            <div style = "float:left; width: 75%; text-align: center">
-                <h1>Care Love</h1>
+
+            <div class="row">
+               <div class="tableHamburger"> <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span> </div>
+               <div class="tableHeader"> <h4 style="color:#4CAF50; font-family:verdana;"> Home </h4> </div>
+               <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
             </div>
+
+            <div class="appFunctionalityExplanation">
+              <h5>Looking for professional caretakers? We help connect you to them.</h5>
+            </div>
+
+        <div class="container">
+          <div class="caretakersNav">
+            <script id="caretaker-list-template" type="text/x-handlebars-template">
+              <li class="caretakers">
+                <span onclick="openNewPage({{index}})">
+                  <a href="{{profilePage}}">
+                    <div id="{{name}}">
+                      <h3>{{name}}</h3>
+                      <img src="{{profilePic}}" class="img-fluid" alt="{{name}} Picture">
+                      <img class="img-fluid" style="display: inline-block; margin: 0 auto;" src="pix/stars_{{stars}}.png">
+                      <h4>{{num_reviews}} reviews</h4>
+                      <h4>Hourly Rate: ${{hourly_rate}}</h4>
+                    </div>
+                  </a>
+                </span>
+              </li>
+            </script>
+          </div>
+
+          <div id="templatedProjects">
+            <!-- we will inject templated project HTML code into here -->
+          </div>
+
         </div>
-
-
-        <!-- Handlebar Code -->
-        <!-- remember to put Handlebars fs within script tags so that the
-     webpage doesn't attempt to load them as HTML -->
-<script id="name-entry" type="text/x-handlebars-template">
-    <h2 style = "text-align: center">Reviews for <b>{{name}}</b></h2>
-    <br>
-</script>
-
-    <div id="injectName">
-      <!-- we will inject templated project HTML code into here -->
-    </div>
-
-<script id="entry-template" type="text/x-handlebars-template">
-  <div style="text-align: center;">
-    <p>Stars: <b>{{stars}}</b></p>
-    <p>{{review_text}}</p>
-    <br>
-  </div>
-</script>
-
-    <div id="templatedProjects">
-      <!-- we will inject templated project HTML code into here -->
-    </div>
-
-    <div class="text-center">
-      <a id="write_review_button" class="btn btn-info" role="button">Write a Review</a>
-      <br>
-
-      <h5 id="star_text">Stars: </h5>
-      <select id="star_options">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-
-      <br>
-      <br>
-      <textarea id="newReview" rows="4" cols="50" placeholder="Enter Review"></textarea>
-      <br>
-      <br>
-
-      <a id="submit_button" class="btn btn-info" role="button">Submit Review</a>
-
-      <br>
-      <br>
-      <h4 id="review_submission_message">Thank you for submitting a review, it will show up among the reviews once it has been approved by our moderators!</h3>
-    </div>
-
 
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -107,6 +98,6 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/handlebars-v4.0.11.js"></script>
-        <script src="js/reviews.js"></script>
+        <script src="js/home.js"></script>
       </body>
       </html>

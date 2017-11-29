@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	localStorage.setItem('filterPageVisited', 1);
+
 	var minAgeWarning = document.getElementById("min-age-warning");
     minAgeWarning.style.display = "none";
 

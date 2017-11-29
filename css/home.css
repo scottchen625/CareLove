@@ -4,31 +4,32 @@ nav ul {
   overflow-y:scroll;
 }
 
-.tableHamburger{
+.tableMenu{
   display: table-cell;       
   text-align: left; 
-  padding-left: 30px;
-  width: 33.4%;   
+  width: 20%;   
 }
 
 .tableHeader{
   display: table-cell;       
-  text-align: center;  
-  width: 33.3%;   
+  text-align: center; 
+  width: 60%;   
 }
 
 .tableFilterButton{
   display: table-cell;       
   text-align: right;
-  width: 33.3%;   
-
+  width: 20%;
 }
-
 
 .row {
  display: table;
  width: 100%;
  table-layout: fixed;
+
+ margin-right: 0px !important;
+ margin-left: 0px !important;
+
 }
 
 
@@ -69,6 +70,12 @@ nav ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.sortbyelements{
+  display: table-cell; 
+  text-align: center;
+  
 }
 
 
@@ -118,3 +125,35 @@ img {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+h1 {
+  padding: 0;
+  color:#4CAF50; 
+  font-family:verdana;
+  text-align: center;
+}
+#filterby_button{
+ margin-bottom: 3px;
+ margin-right: 15px;
+}
+
+#menuButton{
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #ADE78C;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
