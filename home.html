@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110408954-1"></script>
   <script>
@@ -10,6 +12,7 @@
 
     gtag('config', 'UA-110408954-1');
   </script>
+
   <title>HomePage</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,7 +52,7 @@
             </div>
 
             <div class="row" id="navbar">
-               <div class="tableMenu"> <a class="btn btn-info" id="menuButton" cursor:pointer;" onclick="openNav()">Menu</a> </div>
+               <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNav()">Menu</a> </div>
                <div class="tableHeader"> <h4>Home</h4> </div>
                <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
             </div>
@@ -62,6 +65,9 @@
             </div>
 
         <!--ADD A NEW OPTION THING HERE FOR SORTING PURPOSES-->
+        <div class="sortby_class">
+        <script id="sortby_picker" type="text/x-handlebars-template">
+  
         <div class="sortbyelements">
           <h4 style="float: left; ">Sort By: </h4>
           <select style="float: right; " id="sort_by_options">
@@ -72,7 +78,9 @@
             <option value="4">Closest To Me</option>
           </select>
         </div>
-
+      
+        </script>
+        </div>
 
 
         <div class="container">
