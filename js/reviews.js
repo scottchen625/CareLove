@@ -43,6 +43,7 @@ $(document).ready(function() {
   var data = [];
   for (var i = 0; i < review_array.length; i++) {
     var reviewObject = new Object();
+
     reviewObject["stars"] = stars_array[i];
     reviewObject["review_text"] = review_array[i];
     data.push(reviewObject);
