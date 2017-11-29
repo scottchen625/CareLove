@@ -44,6 +44,13 @@ $(document).ready(function() {
   for (var i = 0; i < review_array.length; i++) {
     var reviewObject = new Object();
 
+    var starImg = "";
+    for(var j = 0; j < Number(stars_array[i]); j++){
+      starImg = starImg + '<span class=\"fa fa-star checked\"></span>;'
+    }
+    var htmlObject = $(starImg); // jquery call
+    console.log(htmlObject);
+
     reviewObject["stars"] = stars_array[i];
     reviewObject["review_text"] = review_array[i];
     data.push(reviewObject);
