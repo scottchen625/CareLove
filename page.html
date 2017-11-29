@@ -80,10 +80,7 @@
             </div>
 
         <!--ADD A NEW OPTION THING HERE FOR SORTING PURPOSES-->
-        <div class="sortby_class">
-        <script id="sortby_picker" type="text/x-handlebars-template">
-        {{#if sortby}}
-        <div class="sortbyelements">
+        <div class="sortbyelements" id="sortbyelementsId">
           <h4 style="float: left; ">Sort By: </h4>
           <select style="float: right; " id="sort_by_options">
             <option  value="0">No Sort</option>
@@ -92,9 +89,6 @@
             <option value="3">Aged Younger to Older</option>
             <option value="4">Closest To Me</option>
           </select>
-        </div>
-        {{/if}}
-        </script>
         </div>
 
 

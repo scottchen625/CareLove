@@ -65,11 +65,10 @@ $(function () {
 
   
   console.log(localStorage.getItem("sortby"));
-  if(localStorage.getItem("sortby") == true)
-  {
-    var e = document.getElementById("sort_by_options");
-    e.options[sort_option].selected = true;
-  }
+  var e = document.getElementById("sort_by_options");
+  e.options[sort_option].selected = true;
+   
+  
 
   console.log(minAge);
   console.log(maxAge);
@@ -79,7 +78,7 @@ $(function () {
   console.log(currUser);
   console.log(sort_option);
 
-  var simpleData = {};
+  /*var simpleData = {};
 
   var theTemplateScriptSortBy   = $("#sortby_picker").html();
   var theTemplateSortBy = Handlebars.compile(theTemplateScriptSortBy);
@@ -87,7 +86,7 @@ $(function () {
   simpleData.sortby = choice;
   var htmlSortBy = theTemplateSortBy(simpleData);
   var parentDiv = $(".sortby_class");
-  parentDiv.append(htmlSortBy); 
+  parentDiv.append(htmlSortBy); */
 
 	if(priceRange == 1)
 	{
