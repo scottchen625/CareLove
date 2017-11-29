@@ -83,18 +83,11 @@ $(function () {
 
   var theTemplateScriptSortBy   = $("#sortby_picker").html();
   var theTemplateSortBy = Handlebars.compile(theTemplateScriptSortBy);
-  var choice = JSON.parse(localStorage.getItem("grid"));
-  simpleData.grid = choice;
+  var choice = JSON.parse(localStorage.getItem("sortby"));
+  simpleData.sortby = choice;
   var htmlSortBy = theTemplateSortBy(simpleData);
   var parentDiv = $(".sortby_class");
-  parentDiv.append(htmlSortBy);
-
-
-  
-  if(localStorage.getItem("sortby") == true) {
-  var curHtmlSortBy = theTemplateSortBy(filteredResults[i]);
-  $(".caretakersNav").append(curHtmlSortBy);
-  }
+  parentDiv.append(htmlSortBy); 
 
 	if(priceRange == 1)
 	{
