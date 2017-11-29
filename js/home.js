@@ -63,13 +63,10 @@ $(function () {
   var currUser = localStorage.getItem('loggedInUserIndex');
   var sort_option = localStorage.getItem('sort_option') || 0;
 
+  var e = document.getElementById("sort_by_options");
+  e.options[sort_option].selected = true;
+   
   
-  console.log(localStorage.getItem("sortby"));
-  if(localStorage.getItem("sortby") == true)
-  {
-    var e = document.getElementById("sort_by_options");
-    e.options[sort_option].selected = true;
-  }
 
   console.log(minAge);
   console.log(maxAge);
@@ -80,14 +77,15 @@ $(function () {
   console.log(sort_option);
 
   var simpleData = {};
-
-  var theTemplateScriptSortBy   = $("#sortby_picker").html();
-  var theTemplateSortBy = Handlebars.compile(theTemplateScriptSortBy);
-  var choice = JSON.parse(localStorage.getItem("sortby"));
-  simpleData.sortby = choice;
-  var htmlSortBy = theTemplateSortBy(simpleData);
-  var parentDiv = $(".sortby_class");
-  parentDiv.append(htmlSortBy); 
+  console.log(localStorage.getItem("hamburger_menu"));
+  var theTemplateScriptHamburger   = $("#menu-button-template").html();
+  var theTemplateHamburger = Handlebars.compile(theTemplateScriptHamburger);
+  var choice = JSON.parse(localStorage.getItem("hamburger_menu"));
+  simpleData.hamburger_menu = choice;
+  console.log(simpleData.hamburger_menu);
+  var htmlHamburger = theTemplateHamburger(simpleData);
+  var parentDiv = $(".row");
+  parentDiv.append(htmlHamburger);
 
 	if(priceRange == 1)
 	{

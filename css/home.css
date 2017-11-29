@@ -41,7 +41,6 @@ nav ul {
 .caretakersNav {
   list-style-type: none;
   overflow:hidden;
-  overflow-y:scroll;
 }
 
 .caretakers {
