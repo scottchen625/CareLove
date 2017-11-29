@@ -26,6 +26,8 @@ img.loginImage {
 .row {
 	width: 100%;
 	table-layout: fixed;
+	margin-right: 0px !important;
+ 	margin-left: 0px !important;
 }
 
 .container{

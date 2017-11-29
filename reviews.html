@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="css/home.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/profile.css">
+
 
 
   <link rel="manifest" href="site.webmanifest">
@@ -33,34 +35,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div>
-            <div style = "float:left; width: 25%;">
+        <div class="careloveTitle">
+          Care Love
+        </div>
+
+        <script id="name-entry" type="text/x-handlebars-template">
+            <h3 style = "text-align: center">Reviews for <b>{{name}}</b></h3>
+        </script>
+
+
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="backbutton">
                 <a href="careProviderProfile.html" class="btn btn-info" role="button">Back</a>
             </div>
-            <div style = "float:left; width: 75%; text-align: center">
-                <h1>Care Love</h1>
+            <div class="headertext">
+                <div id="injectName"></div>
             </div>
+            <div class="backbutton"></div>
         </div>
 
 
         <!-- Handlebar Code -->
         <!-- remember to put Handlebars fs within script tags so that the
      webpage doesn't attempt to load them as HTML -->
-<script id="name-entry" type="text/x-handlebars-template">
-    <h2 style = "text-align: center">Reviews for <b>{{name}}</b></h2>
-    <br>
-</script>
 
-    <div id="injectName">
-      <!-- we will inject templated project HTML code into here -->
-    </div>
+
+    
 
 <script id="entry-template" type="text/x-handlebars-template">
-  <div style="text-align: center;">
-    <p>Stars: <b>{{stars}}</b></p>
+  <div style="text-align: center; border: solid; padding-top: 15px;">
+    <p>Stars: <b>{{stars}} / 5</b></p>
     <p>{{review_text}}</p>
     <br>
   </div>
+  <br>
 </script>
 
     <div id="templatedProjects">
