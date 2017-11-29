@@ -289,12 +289,21 @@ $("#sort_by_options").change(function() {
 
 
 /* Open the sidenav */
-function openNav() {
+function openNavHamburger() {
     document.getElementById("mySidenav").style.display = "block";
-    console.log("menu/hamburger button clicked"); // fix smart quote from slide!
+    console.log("hamburger button clicked"); // fix smart quote from slide!
     // tracker code here, refer to slide #26 and #27
     tracker = ga.getAll()[0];
-    tracker.send('event', 'button', 'click');
+    tracker.send('event', 'hamburger_button', 'click');
+}
+
+/* Open the sidenav */
+function openNavMenu() {
+    document.getElementById("mySidenav").style.display = "block";
+    console.log("menu button clicked"); // fix smart quote from slide!
+    // tracker code here, refer to slide #26 and #27
+    tracker = ga.getAll()[0];
+    tracker.send('event', 'menu_button', 'click');
 }
 
 /* Close/hide the sidenav */

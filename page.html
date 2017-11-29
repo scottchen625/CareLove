@@ -68,11 +68,11 @@
             <div class="row" id="navbar">
               <script id="menu-button-template" type="text/x-handlebars-template">
                {{#if hamburger_menu}}
-                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNav()">&#9776;</a> </div>
+                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNavHamburger()">&#9776;</a> </div>
                 <div class="tableHeader"> <h4>Home</h4> </div>
                 <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
                {{else}}
-                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNav()">Menu</a> </div>
+                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNavMenu()">Menu</a> </div>
                 <div class="tableHeader"> <h4>Home</h4> </div>
                 <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
                {{/if}}
