@@ -1,6 +1,20 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Google Analytics Content Experiment code -->
+  <script>function utmx_section(){}function utmx(){}(function(){var
+  k='165412232-1',d=document,l=d.location,c=d.cookie;
+  if(l.search.indexOf('utm_expid='+k)>0)return;
+  function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+  indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+  length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+  '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+  '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+  '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+  valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+  '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+  </script><script>utmx('url','A/B');</script>
+  <!-- End of Google Analytics Content Experiment code -->
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -67,7 +81,7 @@
         <!--ADD A NEW OPTION THING HERE FOR SORTING PURPOSES-->
         <div class="sortby_class">
         <script id="sortby_picker" type="text/x-handlebars-template">
-  
+        {{#if sortby}}
         <div class="sortbyelements">
           <h4 style="float: left; ">Sort By: </h4>
           <select style="float: right; " id="sort_by_options">
@@ -78,7 +92,7 @@
             <option value="4">Closest To Me</option>
           </select>
         </div>
-      
+        {{/if}}
         </script>
         </div>
 
