@@ -64,9 +64,12 @@ $(function () {
   var sort_option = localStorage.getItem('sort_option') || 0;
 
   
-
-  var e = document.getElementById("sort_by_options");
-  e.options[sort_option].selected = true;
+  console.log(localStorage.getItem("sortby"));
+  if(localStorage.getItem("sortby") == true)
+  {
+    var e = document.getElementById("sort_by_options");
+    e.options[sort_option].selected = true;
+  }
 
   console.log(minAge);
   console.log(maxAge);
@@ -76,8 +79,22 @@ $(function () {
   console.log(currUser);
   console.log(sort_option);
 
+  var simpleData = {};
+
+  var theTemplateScriptSortBy   = $("#sortby_picker").html();
+  var theTemplateSortBy = Handlebars.compile(theTemplateScriptSortBy);
+  var choice = JSON.parse(localStorage.getItem("grid"));
+  simpleData.grid = choice;
+  var htmlSortBy = theTemplateSortBy(simpleData);
+  var parentDiv = $(".sortby_class");
+  parentDiv.append(htmlSortBy);
 
 
+  
+  if(localStorage.getItem("sortby") == true) {
+  var curHtmlSortBy = theTemplateSortBy(filteredResults[i]);
+  $(".caretakersNav").append(curHtmlSortBy);
+  }
 
 	if(priceRange == 1)
 	{
