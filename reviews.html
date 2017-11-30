@@ -44,11 +44,6 @@
             <h3 style = "text-align: center">Reviews for {{name}}</h3>
         </script>
             
-            <span class=\"fa fa-star checked\"></span>
-            <span class=\"fa fa-star checked\"></span>
-            <span class=\"fa fa-star checked\"></span>
-            <span class=\"fa fa-star checked\"></span>
-            <span class=\"fa fa-star checked\"></span>
 
         <div class="row" style="margin-bottom: 30px;">
             <div class="backbutton">
@@ -69,8 +64,8 @@
     
 
 <script id="entry-template" type="text/x-handlebars-template">
-  <div style="text-align: center; border: solid; padding-top: 15px;">
-    <p>Stars: <b>{{stars}} / 5</b></p>
+  <div style="text-align: center; border: solid; border-color: #601986; padding-top: 15px; padding-left: 15px; padding-right: 15px;">
+    <img class="img-fluid" style="display: block; margin: 0 auto; width: 40%;" src="pix/stars_{{stars}}.png">
     <p>{{review_text}}</p>
     <br>
   </div>
@@ -85,7 +80,7 @@
           <span class="fa fa-star"></span>
           -->
 
-    <div id="templatedProjects">
+    <div id="templatedProjects" style="padding-left: 15px; padding-right: 15px;">
       <!-- we will inject templated project HTML code into here -->
     </div>
 
