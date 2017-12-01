@@ -3,7 +3,7 @@
 <head>
   <!-- Google Analytics Content Experiment code -->
   <script>function utmx_section(){}function utmx(){}(function(){var
-  k='165412232-8',d=document,l=d.location,c=d.cookie;
+  k='165412232-10',d=document,l=d.location,c=d.cookie;
   if(l.search.indexOf('utm_expid='+k)>0)return;
   function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
   indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -69,11 +69,11 @@
             <div class="row" id="navbar">
               <script id="menu-button-template" type="text/x-handlebars-template">
                {{#if hamburger_menu}}
-                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNavHamburger()">&#9776;</a> </div>
+                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNav()">&#9776;</a> </div>
                 <div class="tableHeader"> <h4>Home</h4> </div>
                 <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
                {{else}}
-                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNavMenu()">Menu</a> </div>
+                <div class="tableMenu"> <a class="btn btn-info" id="menuButton" style="cursor:pointer;" onclick="openNav()">Menu</a> </div>
                 <div class="tableHeader"> <h4>Home</h4> </div>
                 <div class="tableFilterButton"> <a href="filter.html" class="btn btn-info" id="filterby_button" role="button">Filter By</a> </div>
                {{/if}}
