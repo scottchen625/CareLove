@@ -289,21 +289,12 @@ $("#sort_by_options").change(function() {
 
 
 /* Open the sidenav */
-function openNavHamburger() {
+function openNav() {
     document.getElementById("mySidenav").style.display = "block";
-    console.log("hamburger button clicked"); // fix smart quote from slide!
+    console.log("button clicked"); // fix smart quote from slide!
     // tracker code here, refer to slide #26 and #27
     tracker = ga.getAll()[0];
-    tracker.send('event', 'hamburger_button', 'click');
-}
-
-/* Open the sidenav */
-function openNavMenu() {
-    document.getElementById("mySidenav").style.display = "block";
-    console.log("menu button clicked"); // fix smart quote from slide!
-    // tracker code here, refer to slide #26 and #27
-    tracker = ga.getAll()[0];
-    tracker.send('event', 'menu_button', 'click');
+    tracker.send('event', 'button', 'click');
 }
 
 /* Close/hide the sidenav */
